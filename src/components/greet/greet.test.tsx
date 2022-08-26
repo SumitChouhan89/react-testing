@@ -16,3 +16,9 @@ describe("Nested", () => {
     expect(textElement).toBeInTheDocument();
   });
 });
+
+test("To have the particular className", () => {
+  render(<Greet />);
+  const textElement = screen.getByText(/Hello/i);
+  expect(textElement).toHaveClass("div-class");
+});

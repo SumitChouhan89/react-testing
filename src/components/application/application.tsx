@@ -3,10 +3,18 @@ export const Application = () => {
     <>
       <h1>Job Application form</h1>
       <h2>Section 1</h2>
+      <p>All Fields are mendatory</p>
+      <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Fullname" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Fullname"
+            value="Sumit"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>

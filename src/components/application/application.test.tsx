@@ -15,6 +15,12 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    const paragraphElement = screen.getByText("All Fields are mendatory");
+    expect(paragraphElement).toBeInTheDocument();
+
+    const imageElement = screen.getByAltText("a person with a laptop");
+    expect(imageElement).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
@@ -27,6 +33,9 @@ describe("Application", () => {
 
     const nameElement3 = screen.getByPlaceholderText("Fullname");
     expect(nameElement3).toBeInTheDocument();
+
+    const nameElement4 = screen.getByDisplayValue("Sumit");
+    expect(nameElement4).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",

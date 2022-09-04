@@ -18,6 +18,12 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All Fields are mendatory");
     expect(paragraphElement).toBeInTheDocument();
 
+    const titleElement = screen.getByTitle("close");
+    expect(titleElement).toBeInTheDocument();
+
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
     const imageElement = screen.getByAltText("a person with a laptop");
     expect(imageElement).toBeInTheDocument();
 

@@ -20,4 +20,20 @@ describe("Skills", () => {
     const headingElement = screen.getByText(/are List/i);
     expect(headingElement).toBeInTheDocument();
   });
+
+  test("Renders login button", () => {
+    render(<Skills skills={skills} />);
+    const loginButton = screen.getByRole("button", {
+      name: "Login",
+    });
+    expect(loginButton).toBeInTheDocument();
+  });
+
+  test("Start Learning button is not rendered", () => {
+    render(<Skills skills={skills} />);
+    const startButton = screen.queryByRole("button", {
+      name: "Start Learning",
+    });
+    expect(startButton).not.toBeInTheDocument();
+  });
 });
